@@ -1,0 +1,186 @@
+/* Global reset to prevent horizontal scroll */
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Container styling */
+.app-container {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  font-family: Arial, sans-serif;
+  color: #333;
+  box-sizing: border-box;
+}
+
+/* Heading styling */
+.app-container h1 {
+  text-align: center;
+  color: #007bff;
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+}
+
+/* Contact form styling */
+.contact-form {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.contact-form input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 1rem;
+}
+
+.contact-form button {
+  padding: 10px 20px 10px 20px;
+  background-color: #28a745; /* green */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  align-self: center;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #1e7e34;
+}
+
+/* Contact list styling */
+/* .contact-list {
+    no overflow-x on mobile 
+} */
+
+.contact-list table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+
+.contact-list th, .contact-list td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+  font-size: 1rem;
+}
+
+.contact-list th {
+  background-color: #007bff;
+  color: white;
+  text-align: center;
+}
+
+.contact-list button {
+  background-color: #dc3545; /* red */
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+
+}
+
+.contact-list button:hover {
+  background-color: #a71d2a;
+}
+
+.contact-list p{
+  text-align: center;
+}
+
+/* Responsive styling */
+@media (max-width: 600px) {
+  .app-container {
+    max-width: 100%;
+    padding: 15px 10px;
+    margin: 10px 5px;
+  }
+
+  .app-container h1 {
+    font-size: 1.5rem;
+  }
+
+  .contact-form input {
+    width: 100%;
+    margin-bottom: 8px;
+    font-size: 1.1rem;
+    padding: 12px;
+  }
+
+  .contact-form button {
+    width: 100%;
+    align-self: stretch;
+    font-size: 1.1rem;
+    padding: 12px;
+  }
+
+  /* Contact list block layout for mobile */
+  .contact-list table, 
+  .contact-list thead, 
+  .contact-list tbody, 
+  .contact-list th, 
+  .contact-list td, 
+  .contact-list tr {
+    display: block;
+    width: 100%;
+  }
+
+  .contact-list thead tr {
+    display: none;
+  }
+
+  .contact-list tr {
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+  }
+
+  .contact-list td {
+    border: none;
+    padding: 8px 0;
+    position: relative;
+    padding-left: 40%;
+    text-align: left;
+    font-size: 1.1rem;
+    white-space: normal;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    word-break: break-word;
+  }
+
+  .contact-list td::before {
+    position: absolute;
+    top: 8px;
+    left: 10px;
+    width: 35%;
+    white-space: nowrap;
+    font-weight: bold;
+    content: attr(data-label);
+  }
+
+  .contact-list button {
+    width: auto;
+    min-width: 80px;
+    margin-top: 10px;
+    font-size: 1.1rem;
+    padding: 8px 12px;
+  }
+}
